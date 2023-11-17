@@ -5,7 +5,6 @@ def solve(strings):
     for char in alph:
         alph_dict[char] += 1 * i
         i += 1
-    #print(alph_dict)
     match_number = []
     for o, string in enumerate(strings):
         match_number.append(0)
