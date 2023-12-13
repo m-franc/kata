@@ -6,6 +6,7 @@ def make_readable(seconds):
     ss = 0
 
     for i in range(seconds + 1):
+        ss = i
         if i % 60 == 0:
             mm += 1
         if mm % 60 == 0:
