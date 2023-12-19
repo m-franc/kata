@@ -1,16 +1,18 @@
-import re
-
 def quicksum(packet):
-    result = 1
-    packet_by_2 = []
-    if packet.isupper() == False:
+    if not all((c.isalpha() and c.isupper()) or c.isspace() for c in packet):
         return 0
-    for i, elem in enumerate(packet):
-        if i == len(packet) - 1:
-            packet_by_2.append(elem)
-        elif elem:
-            packet_by_2.append((elem, packet[i+1]))
-    print(packet_by_2)
-    return 0
+    result = 0
+    alph = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    alph_dict = dict.fromkeys(alph, 0)
+    i = 1
+    for letter in alph:
+        alph_dict[letter] += 1 * i
+        i += 1
+    for i, elem in enumerate(packet, 1):
+        if elem == ' ':
+            continue
+        else:
+            result += i * alph_dict[elem]
+    return result
 
-print(quicksum("A B C D E F G H I J K L M N O P Q R S T U V W X Y Z"))
+print(quicksum("As"))
