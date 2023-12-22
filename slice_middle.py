@@ -4,7 +4,6 @@ import math
 
 def reverse_middle(lst):
     len_lst = len(lst)
-    
     if len_lst == 1:
         return lst
     elif len_lst < 4:

@@ -2,8 +2,6 @@
 
 def likes(names):
     len_n = len(names)
-    print("{}, {} and {others} others like this".format(*names[:3], others=len_n-2))
-    print("bonjour",1,"oui",678)
     match len_n:
         case 0:
             return "no one likes this"

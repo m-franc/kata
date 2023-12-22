@@ -19,3 +19,10 @@ def rot13(message):
 print({k : v for v, k in enumerate(alph_up, 1)})
 
 print(rot13("TeSt"))
+
+txt = "Good night Sam!"
+x = "mSa"
+y = "eJo"
+mytable = str.maketrans(x, y)
+print(mytable)
+print(txt.translate(mytable)) 
