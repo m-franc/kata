@@ -9,4 +9,4 @@ def time_convert(num):
     return ":".join(str(t) if t > 9 else "0" + str(t) for t in times)
 
 print(time_convert(3600))
-print('{:02d}:{:02d}'.format(*divmod(max(int(3600), 0), 60)))
+print('{:03}:{:03}'.format(3, 4))
