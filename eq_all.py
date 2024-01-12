@@ -7,6 +7,6 @@ def eq_all(iterable):
     first = next(iterator, False)
     return all(first == elem for elem in iterator)
 print(eq_all("aaaaabbbbb"))
-print(list(islice(groupby("aaaaabbbbbccccddddeeeeffff"), 2, 4)))
+print(next(islice(groupby(""), 1, None), False))
 #print(len({}))
 #print(False == True)
