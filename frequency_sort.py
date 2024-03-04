@@ -5,11 +5,9 @@ from collections import Counter
 
 
 def solve(arr):
-    arr_cnt = Counter(arr).most_common()
-    print(arr_cnt)
+    arr_cnt = Counter(arr)
     new_arr = []
-    arr_cnt = sorted(arr_cnt, key= lambda i: i[0])
-    print(arr_cnt)
+    arr_cnt = sorted(arr_cnt.items(), key=lambda item: (-item[1], item[0]))
     for elem in arr_cnt:
         for i in range(elem[1]):
             new_arr.append(elem[0])
