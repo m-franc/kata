@@ -1,4 +1,3 @@
-
 pub fn to_camel_case(text: &str) -> String {
   let mut text_camel_cased = String::new();
   let mut capitalize_next = false;
