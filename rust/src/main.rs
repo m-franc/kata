@@ -1,9 +1,9 @@
 // mod to_camel_case;
 // use to_camel_case::to_camel_case;
 
-mod numbers_to_letters;
-use numbers_to_letters::switcher;
+mod strings_end_with;
+use strings_end_with::solution;
 
 fn main() {
-  println!("{}", switcher(vec!["12", "1", "3", "4"]));
+  println!("{}", solution("banana", "ana"));
 }
